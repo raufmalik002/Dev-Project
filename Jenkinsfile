@@ -29,10 +29,8 @@ pipeline {
                 sh '''
                 echo "Deploying version: $IMAGE_TAG"
 
-                docker stop $APP_NAME || true
-                docker rm $APP_NAME || true
-
-                docker run -d -p 5000:5000 --name $APP_NAME $APP_NAME:$IMAGE_TAG
+                docker-compose down || true
+                docker-compose up -d
                 '''
             }
         }
