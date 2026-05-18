@@ -10,7 +10,7 @@ pipeline {
 
         stage("Clone Code") {
             steps {
-                git branch: 'main', url: 'https://github.com/raufmalik002/Dev-Project.git'
+                git branch: 'main', url: 'https://github.com/raufmalik002/Production-Ready-CI-CD-Pipeline-with-Docker-Jenkins-AWS.git'
             }
         }
 
